@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <main class="home">
+    <component
+      v-for="component in components"
+      :is="component"
+      :key="`${component}-key`"
+    />
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import About from "@/components/About.vue";
+import Hero from "@/components/Hero.vue";
+import Portfolio from "@/components/Portfolio.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    About,
+    Hero,
+    Portfolio
+  },
+  data() {
+    return {
+      components: ["Hero", "About", "Portfolio"]
+    };
   }
 };
 </script>
