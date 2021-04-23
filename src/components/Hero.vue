@@ -7,18 +7,18 @@
       </p>
       <div class="hero__links" id="social-links">
         <a
-          href="https://github.com/nicoalli"
-          target="_blank"
-          class="hero__link"
-        >
-          <img :src="github" alt="github" class="hero__icon" />
-        </a>
-        <a
           href="mailto:alli.nicolette@gmail.com"
           target="_blank"
           class="hero__link"
         >
           <img :src="email" alt="email" class="hero__icon" />
+        </a>
+        <a
+          href="https://github.com/nicoalli"
+          target="_blank"
+          class="hero__link"
+        >
+          <img :src="github" alt="github" class="hero__icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/nicole-alli/"
@@ -60,13 +60,6 @@ export default {
 
 <style scoped>
 #hero-wrapper {
-  /* background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(224, 215, 233, 1) 26%,
-    rgba(176, 162, 191, 1) 80%
-  ); */
   background: var(--primary);
   border-bottom: 1px solid var(--siyah-black);
   min-height: 70vh;
@@ -103,9 +96,16 @@ export default {
   align-items: center;
   background: var(--secondary);
   border-radius: 9999px;
+  border: 2px solid var(--primary);
   display: flex;
   height: 3rem;
   width: 3rem;
+}
+.hero__link:hover,
+.hero__link:focus {
+  border: 2px solid var(--text-primary);
+  transition: border 0.3s ease-in-out;
+  outline: none;
 }
 
 .hero__icon {

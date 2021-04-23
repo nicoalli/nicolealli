@@ -2,15 +2,18 @@
   <div id="app">
     <Header />
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from "@/components/Footer.vue";
 import Header from "@/components/Header.vue";
 
 export default {
   name: "App",
   components: {
+    Footer,
     Header
   }
 };
@@ -31,6 +34,10 @@ body {
 main {
   width: 100vw;
   overflow-x: hidden;
+}
+
+a {
+  color: var(--folklore);
 }
 
 #app {
@@ -63,7 +70,7 @@ main {
 }
 
 .section__content {
-  width: 60vw;
+  width: 70vw;
   margin: auto;
 }
 
@@ -84,12 +91,18 @@ main {
   margin-left: -1rem;
   padding: 0 0.75rem;
 }
+.text--thick {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
 :root {
   --primary: var(--fairy-wand);
   --secondary: var(--light-lilac);
   --text-primary: var(--siyah-black);
-  --text-header: var(--fairy-wand);
+  --text-secondary: rgba(29, 25, 26, 0.85);
 
   --silt: #8b7a72;
   --light-lilac: #dac6d4;

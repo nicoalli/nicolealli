@@ -8,7 +8,7 @@ export const UICard = {
   },
   render() {
     const Tag = this.tag;
-    return <Tag>{this.$slots.default}</Tag>;
+    return <Tag class="card">{this.$slots.default}</Tag>;
   }
 };
 
@@ -28,10 +28,10 @@ export const UICardText = {
   render() {
     const TitleTag = this.titleTag;
     return (
-      <div>
-        <TitleTag>{this.$slots.title}</TitleTag>
-        <div> {this.$slots.subtitle}</div>
-        <div>{this.$slots.default}</div>
+      <div class="card__text">
+        <TitleTag class="title">{this.$slots.title}</TitleTag>
+        <div class="subtitle"> {this.$slots.subtitle}</div>
+        <div class="content">{this.$slots.default}</div>
       </div>
     );
   }

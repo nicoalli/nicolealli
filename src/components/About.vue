@@ -35,8 +35,10 @@
           </p>
 
           <p>
-            If I'm not coding you can find me colouring, practicing yoga, cross
-            stitching, or playing with my cat, Coco.
+            I spend most of my time hanging out with my cat Coco, shes the best
+            floof ball. I also enjoy cross stitching, praciting yoga, cooking,
+            and eating my way through Toronto's food scene (serously, Toronto
+            has the best restaurants).
           </p>
         </div>
       </div>
@@ -72,6 +74,6 @@ export default {
 .about__text {
   flex: 2;
   padding: 1rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 </style>
