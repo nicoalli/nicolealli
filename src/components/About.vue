@@ -1,7 +1,11 @@
 <template>
   <section id="about" class="section">
     <div class="section__content">
-      <h2 id="about-title" class="section__title">About</h2>
+      <h2 id="about-title" class="section__title">
+        <span class="underline">
+          About
+        </span>
+      </h2>
       <div class="about__content">
         <div class="about__photo-wrapper">
           <img
@@ -60,7 +64,6 @@ export default {
 }
 
 .about__photo-wrapper {
-  position: relative;
   flex: 1;
   max-width: 30%;
 }
@@ -75,5 +78,18 @@ export default {
   flex: 2;
   padding: 1rem;
   margin-left: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .about__content {
+    display: block;
+  }
+  .about__photo-wrapper {
+    max-width: 70%;
+    margin: auto;
+  }
+  .about__text {
+    margin-left: 0;
+  }
 }
 </style>

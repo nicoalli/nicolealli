@@ -1,7 +1,9 @@
 <template>
   <section id="portfolio" class="section">
     <div class="section__content">
-      <h2 id="portfolio-title" class="section__title">Portfolio</h2>
+      <h2 id="portfolio-title" class="section__title">
+        <span class="underline"> Portfolio </span>
+      </h2>
       <ul class="portfolio__list">
         <UICard tag="li" v-for="(item, index) in portfolio" :key="index">
           <UICardText titleTag="h3">
@@ -115,7 +117,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin: 2rem 0;
   padding: 0;
 }
 
@@ -125,8 +127,8 @@ export default {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  flex: 1 1 calc(100% / 5);
   margin: 1rem;
-  max-width: calc(100% / 4);
   padding: 1rem 1.5rem;
 }
 
@@ -138,10 +140,10 @@ export default {
 .portfolio__list .card__text .subtitle {
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--primary);
-  font-size: 0.9rem;
+  color: #866ca0;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
 }
 
@@ -199,5 +201,17 @@ export default {
 .portfolio__tag.nodejs {
   background: #d9efd7;
   color: #5f6d5f;
+}
+
+@media only screen and (max-width: 1439px) {
+  .portfolio__list .card {
+    flex: 1 1 calc(100% / 3);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio__list .card {
+    flex: 1 1 100%;
+  }
 }
 </style>

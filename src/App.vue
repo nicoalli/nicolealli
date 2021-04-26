@@ -75,13 +75,17 @@ a {
 }
 
 .section__title {
-  border-bottom: 5px solid var(--primary);
   color: var(--text-primary);
+  display: block;
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  width: fit-content;
+}
+.section__title .underline {
+  border-bottom: 5px solid var(--primary);
+  display: inline-block;
+  line-height: 1;
 }
 
 .dark-bg {
@@ -102,7 +106,7 @@ a {
   --primary: var(--fairy-wand);
   --secondary: var(--light-lilac);
   --text-primary: var(--siyah-black);
-  --text-secondary: rgba(29, 25, 26, 0.85);
+  --text-secondary: rgba(29, 25, 26, 0.75);
 
   --silt: #8b7a72;
   --light-lilac: #dac6d4;
@@ -113,5 +117,19 @@ a {
   --terra-brun: #59382a;
   --burns-cave: #7a5a48;
   --silverado-trail: #b6b7c5;
+}
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  .section__content {
+    width: 85vw;
+  }
+  .section__title {
+    text-align: center;
+  }
 }
 </style>

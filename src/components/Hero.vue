@@ -28,11 +28,11 @@
           <img :src="linkedin" alt="linkedin" class="hero__icon" />
         </a>
         <a
-          href="https://resume.creddle.io/resume/gzpy3v9gj6h"
+          href="https://twitter.com/ItsTheNicoleA"
           target="_blank"
           class="hero__link"
         >
-          <img :src="resume" alt="resume" class="hero__icon" />
+          <img :src="twitter" alt="twitter" class="hero__icon" />
         </a>
       </div>
     </div>
@@ -43,7 +43,7 @@
 import github from "@/assets/icons/github.svg";
 import email from "@/assets/icons/email.svg";
 import linkedin from "@/assets/icons/linkedin.svg";
-import resume from "@/assets/icons/resume.svg";
+import twitter from "@/assets/icons/twitter.svg";
 
 export default {
   name: "Hero",
@@ -52,7 +52,7 @@ export default {
       github,
       email,
       linkedin,
-      resume
+      twitter
     };
   }
 };

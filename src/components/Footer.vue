@@ -2,14 +2,6 @@
   <footer id="footer" class="footer">
     <div class="footer__grid">
       <div class="footer__col-1">
-        <figure>
-          <img :src="require('@/assets/images/coco.jpg')" alt="Coco" />
-          <figcaption>
-            Please enjoy this photo of my very fluffy cat, Coco.
-          </figcaption>
-        </figure>
-      </div>
-      <div class="footer__col-2">
         <h2 class="text--thick">Contact</h2>
         <ul class="contact-list">
           <li class="contact-list__item">
@@ -41,6 +33,14 @@
           </li>
         </ul>
       </div>
+      <div class="footer__col-2">
+        <figure>
+          <img :src="require('@/assets/images/coco.jpg')" alt="Coco" />
+          <figcaption>
+            Please enjoy this photo of my very fluffy cat, Coco.
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </footer>
 </template>
@@ -60,7 +60,7 @@ export default {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 1fr 20%;
   margin: auto;
   width: 75vw;
 }
@@ -68,14 +68,14 @@ export default {
 .footer__col-1 {
   margin-left: 2rem;
 }
-.footer__col-1 figure img {
+.footer__col-1 h2 {
+  font-size: 1.25rem;
+}
+
+.footer__col-2 figure img {
   border-radius: 4px;
   object-fit: cover;
   width: 100%;
-}
-
-.footer__col-2 h2 {
-  font-size: 1.25rem;
 }
 
 .contact-list {
@@ -103,5 +103,21 @@ export default {
   color: var(--text-primary);
   outline: 1px solid var(--primary);
   transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 1439px) {
+  .footer__grid {
+    grid-template-columns: 1fr 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__grid {
+    display: block;
+  }
+  .footer__col-1 {
+    margin: auto;
+    text-align: center;
+  }
 }
 </style>

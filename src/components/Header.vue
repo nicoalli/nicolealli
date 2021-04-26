@@ -31,13 +31,15 @@ export default {
 .header {
   background: var(--primary);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .main-nav a {
   border-bottom: 2px solid var(--primary);
@@ -79,10 +81,10 @@ export default {
   transition: all 0.2s ease;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 768px) {
   .main-nav {
-    justify-content: left;
-    padding: 1.5rem;
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 </style>
