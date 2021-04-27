@@ -6,32 +6,16 @@
         She/Her. A developer building accessible & incluse tech.
       </p>
       <div class="hero__links" id="social-links">
-        <a
-          href="mailto:alli.nicolette@gmail.com"
-          target="_blank"
-          class="hero__link"
-        >
+        <a href="mailto:alli.nicolette@gmail.com" class="hero__link">
           <img :src="email" alt="email" class="hero__icon" />
         </a>
-        <a
-          href="https://github.com/nicoalli"
-          target="_blank"
-          class="hero__link"
-        >
+        <a href="https://github.com/nicoalli" class="hero__link">
           <img :src="github" alt="github" class="hero__icon" />
         </a>
-        <a
-          href="https://www.linkedin.com/in/nicole-alli/"
-          target="_blank"
-          class="hero__link"
-        >
+        <a href="https://www.linkedin.com/in/nicole-alli/" class="hero__link">
           <img :src="linkedin" alt="linkedin" class="hero__icon" />
         </a>
-        <a
-          href="https://twitter.com/ItsTheNicoleA"
-          target="_blank"
-          class="hero__link"
-        >
+        <a href="https://twitter.com/ItsTheNicoleA" class="hero__link">
           <img :src="twitter" alt="twitter" class="hero__icon" />
         </a>
       </div>
@@ -120,7 +104,11 @@ export default {
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
+  #hero-wrapper {
+    padding-top: 4rem;
+  }
+
   .hero__title {
     font-size: 6rem;
     letter-spacing: 3px;

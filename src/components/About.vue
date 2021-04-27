@@ -85,7 +85,7 @@ export default {
     display: block;
   }
   .about__photo-wrapper {
-    max-width: 70%;
+    max-width: 50%;
     margin: auto;
   }
   .about__text {

@@ -5,11 +5,7 @@
         <h2 class="text--thick">Contact</h2>
         <ul class="contact-list">
           <li class="contact-list__item">
-            <a
-              class="link text--thick"
-              href="mailto:alli.nicolette@gmail.com"
-              target="_blank"
-            >
+            <a class="link text--thick" href="mailto:alli.nicolette@gmail.com">
               email
             </a>
           </li>
@@ -20,6 +16,11 @@
               target="_blank"
             >
               linkedin
+              <img
+                :src="externalLink"
+                alt="opens in new window"
+                class="external-icon"
+              />
             </a>
           </li>
           <li class="contact-list__item">
@@ -29,6 +30,11 @@
               target="_blank"
             >
               twitter
+              <img
+                :src="externalLink"
+                alt="opens in new window"
+                class="external-icon"
+              />
             </a>
           </li>
         </ul>
@@ -46,8 +52,15 @@
 </template>
 
 <script>
+import externalLink from "@/assets/icons/externalLink.svg";
+
 export default {
-  name: "Footer"
+  name: "Footer",
+  data() {
+    return {
+      externalLink
+    };
+  }
 };
 </script>
 
@@ -86,7 +99,7 @@ export default {
 
 .contact-list__item {
   color: var(--primary);
-  padding: 0.25rem 0;
+  padding: 0.5rem 0;
 }
 .contact-list__item .link {
   border-bottom: 2px solid var(--primary);
@@ -101,8 +114,11 @@ export default {
 .contact-list__item .link:focus {
   background: var(--primary);
   color: var(--text-primary);
-  outline: 1px solid var(--primary);
+  outline: none;
   transition: all 0.2s ease;
+}
+.contact-list__item .external-icon {
+  width: 1rem;
 }
 
 @media only screen and (max-width: 1439px) {

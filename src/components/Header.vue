@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <nav id="main-nav" class="main-nav">
       <router-link :to="{ path: '/' }" class="text--thick"> Home </router-link>
       <router-link :to="{ path: '/', hash: '#about' }" class="text--thick">
@@ -18,7 +18,7 @@
         Resume
       </a>
     </span>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -44,6 +44,7 @@ export default {
 .main-nav a {
   border-bottom: 2px solid var(--primary);
   color: var(--text-primary);
+  line-height: 2;
   margin: 0 1rem;
   padding: 0.25rem 0.5rem;
   text-align: center;
@@ -58,7 +59,7 @@ export default {
   border-bottom: 2px solid var(--siyah-black);
   background: var(--text-primary);
   color: var(--primary);
-  outline: 1px solid var(--text-primary);
+  outline: none;
   transition: all 0.2s ease;
 }
 
