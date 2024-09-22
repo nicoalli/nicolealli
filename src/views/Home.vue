@@ -1,10 +1,6 @@
 <template>
   <main class="home">
-    <component
-      v-for="component in components"
-      :is="component"
-      :key="`${component}-key`"
-    />
+    <h1>Under construction</h1>
   </main>
 </template>
 
@@ -16,9 +12,6 @@ import Portfolio from "@/components/Portfolio.vue";
 export default {
   name: "Home",
   components: {
-    About,
-    Hero,
-    Portfolio
   },
   data() {
     return {
